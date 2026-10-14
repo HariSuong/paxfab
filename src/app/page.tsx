@@ -198,7 +198,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {projects.map((project) => (
+            {projects.slice(0, 4).map((project) => (
               <Link
                 key={project.id}
                 href="/work-history"
