@@ -1,0 +1,42 @@
+[
+  {
+    "id": "shell-upgrader",
+    "name": "Shell Upgrader",
+    "client": "Bechtel",
+    "location": "Ft. Saskatchewan, Alberta, Canada",
+    "lat": 53.7128,
+    "lng": -113.2133,
+    "tons": 33400,
+    "category": "Energy & Petrochemical"
+  },
+  {
+    "id": "sabine-pass-lng",
+    "name": "Sabine Pass LNG Liquefaction",
+    "client": "Cheniere Energy / Bechtel",
+    "location": "Cameron Parish, Louisiana, USA",
+    "lat": 29.7499,
+    "lng": -93.8741,
+    "tons": 18500,
+    "category": "LNG Export Terminal"
+  },
+  {
+    "id": "t3-project-la",
+    "name": "T3 Industrial Expansion",
+    "client": "Industrial Partner",
+    "location": "Geismar, Louisiana, USA",
+    "lat": 30.2274,
+    "lng": -90.9529,
+    "tons": 14200,
+    "category": "Chemical Processing"
+  },
+  {
+    "id": "valero-refinery",
+    "name": "Refinery Modernization",
+    "client": "Valero",
+    "location": "St. Charles, Louisiana, USA",
+    "lat": 29.9702,
+    "lng": -90.4131,
+    "tons": 9800,
+    "category": "Refinery Structural"
+  }
+]
