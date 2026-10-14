@@ -1,3 +1,4 @@
+import 'leaflet/dist/leaflet.css';
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Factory, Flame, Hammer, Ruler } from "lucide-react";

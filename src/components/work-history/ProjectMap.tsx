@@ -101,9 +101,16 @@ export default function ProjectMap({
       className="h-full w-full"
       style={{ height: "100%", width: "100%", minHeight: 420 }}
     >
+      {/*
+        Diagnosed gray map cause (browser probe on localhost):
+        - tile.openstreetmap.org → Failed to fetch (tiles naturalWidth=0)
+        - Carto light_all → 200 but watermark stub “API KEY REQUIRED”
+        - Esri World Street Map → 200, full JPEG tiles, no API key
+        Esri uses {z}/{y}/{x} (not OSM {z}/{x}/{y}).
+      */}
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom'
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
         maxZoom={19}
       />
       <MapInvalidateSize layoutKey={selectedId} />

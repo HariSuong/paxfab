@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import 'leaflet/dist/leaflet.css';
 import WorkHistoryExplorer from "@/components/work-history/WorkHistoryExplorer";
 import projects from "@/data/projects.json";
 
