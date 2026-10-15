@@ -8,7 +8,7 @@
     "lng": -113.2133,
     "tons": 33400,
     "category": "Energy & Petrochemical",
-    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-8_133335369592307836.jpg"
   },
   {
     "id": "sabine-pass-lng",
@@ -19,7 +19,7 @@
     "lng": -93.8741,
     "tons": 28000,
     "category": "LNG Export Terminal",
-    "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-6_133335366732099198.jpg"
   },
   {
     "id": "l2cc-project",
@@ -30,7 +30,7 @@
     "lng": -93.2174,
     "tons": 15500,
     "category": "Chemical Processing",
-    "image": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-3_133335365027108745.jpg"
   },
   {
     "id": "garyville-expansion",
@@ -41,7 +41,7 @@
     "lng": -90.6173,
     "tons": 15000,
     "category": "Refinery Structural",
-    "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-4_133335365501532481.jpg"
   },
   {
     "id": "nag-project",
@@ -52,7 +52,7 @@
     "lng": -94.9774,
     "tons": 8000,
     "category": "Petrochemical",
-    "image": "https://images.unsplash.com/photo-1504328345609-9859ee39fc5e?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-1_133335364700757000.jpg"
   },
   {
     "id": "pvc-vcm-shintech",
@@ -63,7 +63,7 @@
     "lng": -91.2337,
     "tons": 7000,
     "category": "Chemical Processing",
-    "image": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-2_133335365282210551.jpg"
   },
   {
     "id": "gemini-project",
@@ -74,7 +74,7 @@
     "lng": -95.0194,
     "tons": 6500,
     "category": "Chemical Processing",
-    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-5_133335365846951926.jpg"
   },
   {
     "id": "diamond-green-diesel",
@@ -85,7 +85,7 @@
     "lng": -90.4123,
     "tons": 5800,
     "category": "Renewable Fuels",
-    "image": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-7_133335368687387792.jpeg"
   },
   {
     "id": "borstar-bay-3",
@@ -96,7 +96,7 @@
     "lng": -95.2091,
     "tons": 5500,
     "category": "Polymers",
-    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-8_133335369592307836.jpg"
   },
   {
     "id": "nh3-6-expansion",
@@ -107,7 +107,7 @@
     "lng": -90.9934,
     "tons": 5000,
     "category": "Fertilizer / Ammonia",
-    "image": "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-6_133335366732099198.jpg"
   },
   {
     "id": "g3-project",
@@ -118,7 +118,7 @@
     "lng": -91.0259,
     "tons": 4000,
     "category": "Methanol / Chemical",
-    "image": "https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-3_133335365027108745.jpg"
   },
   {
     "id": "heavy-oil-detroit",
@@ -129,7 +129,7 @@
     "lng": -83.0458,
     "tons": 4000,
     "category": "Refinery Structural",
-    "image": "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-4_133335365501532481.jpg"
   },
   {
     "id": "nht-bp-whiting",
@@ -140,7 +140,7 @@
     "lng": -87.4939,
     "tons": 2000,
     "category": "Refinery Structural",
-    "image": "https://images.unsplash.com/photo-1504328345609-9859ee39fc5e?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-1_133335364700757000.jpg"
   },
   {
     "id": "low-sulphur-valero-de",
@@ -151,6 +151,6 @@
     "lng": -75.5946,
     "tons": 1500,
     "category": "Refinery Structural",
-    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80"
+    "image": "/images/the-work-history/Project-Paxfab-2_133335365282210551.jpg"
   }
 ]

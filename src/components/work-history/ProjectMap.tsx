@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   MapContainer,
   TileLayer,
@@ -43,12 +43,18 @@ function createRedPinIcon(active: boolean) {
   });
 }
 
-/** Recalculate map size when layout/drawer changes so tiles don't stay blank or jitter. */
+/** Recalculate map size when layout/drawer changes so tiles don't stay blank. */
 function MapInvalidateSize({ layoutKey }: { layoutKey: string | null }) {
   const map = useMap();
 
   useEffect(() => {
-    const run = () => map.invalidateSize({ animate: false });
+    const run = () => {
+      try {
+        map.invalidateSize({ animate: false });
+      } catch {
+        // Map may already be tearing down during route changes.
+      }
+    };
     run();
     const t1 = window.setTimeout(run, 100);
     const t2 = window.setTimeout(run, 350);
@@ -69,14 +75,48 @@ function FlyToSelected({ project }: { project: Project | null }) {
   useEffect(() => {
     if (!project) return;
     map.flyTo([project.lat, project.lng], 7, { duration: 1.0 });
-    const t = window.setTimeout(() => map.invalidateSize({ animate: false }), 200);
+    const t = window.setTimeout(() => {
+      try {
+        map.invalidateSize({ animate: false });
+      } catch {
+        // ignore teardown races
+      }
+    }, 200);
     return () => window.clearTimeout(t);
   }, [map, project]);
 
   return null;
 }
 
-export default function ProjectMap({
+function MapLoadingPlaceholder() {
+  return (
+    <div className="flex h-full min-h-[420px] w-full items-center justify-center bg-muted">
+      <div className="h-8 w-40 animate-pulse rounded bg-gray-200" />
+    </div>
+  );
+}
+
+/**
+ * Gate MapContainer behind a client mount key so React Strict Mode /
+ * Soft Navigation remounts never reuse a Leaflet-initialized DOM node
+ * ("Map container is being reused by another instance").
+ */
+export default function ProjectMap(props: ProjectMapProps) {
+  const [mountKey, setMountKey] = useState<number | null>(null);
+
+  useEffect(() => {
+    setMountKey(Date.now());
+    return () => setMountKey(null);
+  }, []);
+
+  if (mountKey === null) {
+    return <MapLoadingPlaceholder />;
+  }
+
+  return <ProjectMapCanvas key={mountKey} {...props} />;
+}
+
+function ProjectMapCanvas({
   projects,
   selectedId,
   onSelect,
@@ -102,11 +142,8 @@ export default function ProjectMap({
       style={{ height: "100%", width: "100%", minHeight: 420 }}
     >
       {/*
-        Diagnosed gray map cause (browser probe on localhost):
-        - tile.openstreetmap.org → Failed to fetch (tiles naturalWidth=0)
-        - Carto light_all → 200 but watermark stub “API KEY REQUIRED”
-        - Esri World Street Map → 200, full JPEG tiles, no API key
-        Esri uses {z}/{y}/{x} (not OSM {z}/{x}/{y}).
+        Esri World Street Map — no API key; uses {z}/{y}/{x}.
+        OSM / Carto were blocked or watermarked in local probes.
       */}
       <TileLayer
         attribution='Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom'

@@ -12,15 +12,8 @@ const nextConfig: NextConfig = {
       },
     },
   },
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/**",
-      },
-    ],
-  },
+  // Local assets under /public/images — no remote image hosts required
+  images: {},
 };
 
 export default nextConfig;

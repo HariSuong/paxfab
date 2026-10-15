@@ -36,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${sourceSans.variable} ${barlow.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-charcoal font-sans text-silver">
+      <body className="flex min-h-full flex-col bg-white font-sans text-gray-700">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

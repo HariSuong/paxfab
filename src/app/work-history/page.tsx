@@ -14,15 +14,15 @@ const projectsData = projects as Project[];
 
 export default function WorkHistoryPage() {
   return (
-    <section className="bg-charcoal py-14 sm:py-20">
+    <section className="bg-white py-14 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
           Work History
         </p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold text-white sm:text-5xl">
+        <h1 className="mt-3 max-w-3xl font-display text-4xl font-bold text-gray-950 sm:text-5xl">
           Project Locations &amp; Work History
         </h1>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-silver/80 sm:text-lg">
+        <p className="mt-5 max-w-2xl text-base font-normal leading-relaxed text-gray-700 sm:text-lg">
           Take a look at just a few of the areas across North America where our
           structural steel projects have taken place.
         </p>
