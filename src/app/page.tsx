@@ -304,7 +304,7 @@ export default function Home() {
       </section>
 
       {/* 5. Associations */}
-      <section className="border-t border-gray-200 bg-[#F9FAFB] py-14 sm:py-16">
+      {/* <section className="border-t border-gray-200 bg-[#F9FAFB] py-14 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-center text-xs font-semibold uppercase tracking-wider text-[#6535b1]">
             Industry Associations &amp; Certifications
@@ -330,10 +330,38 @@ export default function Home() {
             ))}
           </ul>
         </div>
-      </section>
+      </section> */}
 
       {/* 6. Final CTA */}
-      
+      <section className="bg-[#6535b1] py-14 sm:py-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-8 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
+          <div className="max-w-xl">
+            <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
+              Partner With a Proven Structural Steel Leader
+            </h2>
+            <p className="mt-3 text-sm font-normal leading-relaxed text-white/85 sm:text-base">
+              Share drawings with commercial operations for capacity, schedule,
+              and fabrication feedback — or access your isolated project portal.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded bg-white px-5 py-3 text-sm font-semibold text-[#6535b1] transition-colors hover:bg-white/90"
+            >
+              Request a Quote
+              <ArrowRight className="h-4 w-4" aria-hidden />
+            </Link>
+            <Link
+              href="/client-portal"
+              className="inline-flex items-center gap-2 rounded border-2 border-white/70 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              <Lock className="h-4 w-4" aria-hidden />
+              Client Portal (FTP Login)
+            </Link>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
